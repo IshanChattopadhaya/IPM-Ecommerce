@@ -1,0 +1,90 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Sample Shopping Site
+    link(rel="stylesheet" href="/static/styles.css")
+
+  body
+    //- Navigation Bar
+    nav.navbar
+      .dropdown
+        button.dropbtn Categories
+        .dropdown-content
+          a(href="#") Men's Clothing
+          a(href="#") Women's Clothing
+          a(href="#") Kids' Clothing
+          a(href="#") Footwear
+          a(href="#") Electronic Devices
+          a(href="#") Groceries
+          a(href="#") Home Decor
+          a(href="#") Kitchenware
+          a(href="#") Books
+      a(href="#") Home
+      a(href="#") Deals
+      a(href="/login") Sign In
+
+    .search-bar
+      input(type="text" placeholder="Search for products")
+      button Search
+
+    section.promo-banners
+      .banner
+        h2 Minimum 50% off | Home, Kitchen & More
+        p Explore top deals on appliances, furniture, and decor
+      .banner
+        h2 Up to 75% off | Electronics & Accessories
+        p Get the best offers on phones, laptops, and more
+
+
+    section.popular-deals
+      h2 Today's Popular Deals
+      .deal-item
+        img(src="/static/leafcurtain.jpeg" alt="Deal 1")
+        h3 Leaf Curtain
+        p
+          strong 81% off
+          |  - ₹389.00
+      .deal-item
+        img(src="/static/fashion1.jpeg" alt="Deal 2")
+        h3 Women's Clothing
+        p
+          strong 73% off
+          |  - ₹689.00
+
+    //- Category Highlights
+    section.category-highlights
+      h2 Explore More Categories
+      .category-highlight
+        img(src="/static/toys.jpeg" alt="Toys & Games")
+        h3 Toys & Games
+        p Up to 75% off
+      .category-highlight
+        img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqtfoMRBIbztGVc6RJ8_ld3YbcINKogb29Yg&s" alt="Fashion Accessories")
+        h3 Fashion Accessories
+        p Up to 75% off
+
+    //- Hero Section
+    header.hero
+      h1 Welcome to Our Store
+      p Shop the latest deals
+      button Shop Now
+
+    //- Product Categories
+    section.categories
+      .category
+        img(src="/static/electronic.jpeg" alt="Electronics")
+        h2 Electronics
+        p Up to 60% off on top brands
+      .category
+        img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThRwD2jrIJCf2LDeWduv-U1E86p0SoNM-uHA&s" alt="Fashion")
+        h2 Fashion
+        p Latest styles starting from ₹299
+
+    //- Footer
+    footer.footer
+      p &copy; 2024 Sample Store - All rights reserved
+      a(href="#") Help
+      a(href="#") Contact
+      a(href="#") Privacy

@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title User Page
+    link(rel="stylesheet" href="/static/styles.css")
+
+  body
+    //- Navigation Bar with Cart Symbol
+    nav.navbar
+      .dropdown
+        button.dropbtn Categories
+        .dropdown-content
+          a(href="#") Men's Clothing
+          a(href="#") Women's Clothing
+          a(href="#") Kids' Clothing
+          a(href="#") Footwear
+          a(href="#") Electronic Devices
+          a(href="#") Groceries
+          a(href="#") Home Decor
+          a(href="#") Kitchenware
+          a(href="#") Books
+      a(href="#") Home
+      a(href="#") Deals
+      a(href="/login") Sign In
+      a(href="/cart" class="cart-link") 
+        i.cart-icon !{ "/static/cart.jpg" }
+        |  Cart
+
+    //- User Page Content
+    section.user-content
+      h1 Welcome, User
+      p This is your personal dashboard where you can view your account details, orders, and more.
+
+    //- Footer
+    footer.footer
+      p &copy; 2024 Sample Store - All rights reserved
+      a(href="#") Help
+      a(href="#") Contact
+      a(href="#") Privacy
+
+    script(src="/static/user_script.js")

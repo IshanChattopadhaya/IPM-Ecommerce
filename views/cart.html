@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart_style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Categories</button>
+            <div class="dropdown-content">
+                <a href="#">Men's Clothing</a>
+                <a href="#">Women's Clothing</a>
+                <a href="#">Kids' Clothing</a>
+                <a href="#">Footwear</a>
+                <a href="#">Electronic Devices</a>
+                <a href="#">Groceries</a>
+                <a href="#">Home Decor</a>
+                <a href="#">Kitchenware</a>
+                <a href="#">Books</a>
+            </div>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="#">Deals</a>
+        <a href="login.html">Sign In</a>
+    </nav>
+
+    <!-- Cart Section -->
+    <div class="cart-container">
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <div class="cart-summary">
+            <p>Total: ₹<span id="cartTotal">0</span></p>
+            <button onclick="proceedToPayment()">Proceed to Payment</button>
+        </div>
+    </div>
+    
+    <script src="cart.js"></script>
+</body>
+</html>
+
