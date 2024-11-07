@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Profile
+    link(rel="stylesheet" href="/static/profile_style.css")
+
+  body
+    .container
+      h1 Profile Page
+      p Welcome, #{email}!
+      
+      .profile-picture
+        img(src="/static/placeholder.png" alt="Profile Picture")
+
+      p Here is your profile information.
+      a(href="/logout") Logout
