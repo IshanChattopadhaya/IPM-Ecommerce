@@ -140,6 +140,11 @@ app.get('/women_cloth',(req,res)=>{
   res.status(200).render('women_cloth.pug',params);
 });
 
+app.get('/reviews',(req,res)=>{
+  const params = {};
+  res.status(200).render('reviews.pug',params);
+});
+
 
 
 app.listen(PORT, () => {
