@@ -1,0 +1,69 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Checkout
+    link(rel="stylesheet" href="/static/checkout.css")
+
+  body
+    // Navbar
+    nav.navbar
+      .dropdown
+        button.dropbtn Categories
+        .dropdown-content
+          a(href="/mens_all") Men's Clothing
+          a(href="/women_cloth") Women's Clothing
+          a(href="#") Kids' Clothing
+          a(href="#") Footwear
+          a(href="#") Electronic Devices
+          a(href="#") Groceries
+          a(href="#") Home Decor
+          a(href="#") Kitchenware
+          a(href="#") Books
+      a(href="/") Home
+      a(href="/cart") Cart
+      a(href="/loginpage") Sign In
+
+    // Checkout Container
+    .checkout-container
+      h2 Checkout
+      #checkout-items.items-container
+        // This section will be populated with items from the cart
+
+      .checkout-summary
+        h3 Total Price:
+          span#final-total ₹0.00
+      
+      // Address Confirmation Section
+      .address-section
+        h3 Confirm Address
+        form#address-form
+          label(for="full-name") Full Name
+          input(type="text" id="full-name" name="fullName" required)
+          
+          label(for="address-line1") Address Line 1
+          input(type="text" id="address-line1" name="addressLine1" required)
+
+          label(for="address-line2") Address Line 2
+          input(type="text" id="address-line2" name="addressLine2")
+
+          label(for="city") City
+          input(type="text" id="city" name="city" required)
+
+          label(for="state") State
+          input(type="text" id="state" name="state" required)
+
+          label(for="zip-code") Zip Code
+          input(type="text" id="zip-code" name="zipCode" required)
+
+          button(type="submit" id="confirm-order") Confirm Order
+
+    // Footer
+    footer.footer
+      p © 2024 Sample Store - All rights reserved
+      a(href="#") Help
+      a(href="#") Contact
+      a(href="#") Privacy
+
+    script(src="/static/checkout.js")

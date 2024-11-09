@@ -145,7 +145,10 @@ app.get('/reviews',(req,res)=>{
   res.status(200).render('reviews.pug',params);
 });
 
-
+app.get('/checkout',(req,res)=>{
+  const params = {};
+  res.status(200).render('checkout.pug',params);
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
