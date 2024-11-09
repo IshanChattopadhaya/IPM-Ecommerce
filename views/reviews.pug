@@ -1,73 +1,105 @@
 doctype html
-head
-  meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title Product Reviews
-  link(rel='stylesheet' href='/static/review.css')
-// Navigation Bar
-nav.navbar
-  .dropdown
-    button.dropbtn Categories
-    .dropdown-content
-      a(href='/mens_cloth') Men&apos;s Clothing
-      a(href='/women_cloth') Women&apos;s Clothing
-      a(href='#') Kids&apos; Clothing
-      a(href='#') Footwear
-      a(href='#') Electronic Devices
-      a(href='#') Groceries
-      a(href='#') Home Decor
-      a(href='#') Kitchenware
-      a(href='#') Books
-  a(href='/') Home
-  a(href='/cart') Cart
-  a(href='/loginpage') Sign In
-// Review Page Header
-header.hero
-  h1 Product Reviews
-  p See what others are saying, or leave your own review
-// Review Form Section
-section.review-form
-  h2 Leave a Review
-  form(action='/submit-review' method='POST')
-    label(for='product') Product:
-    input#product(type='text' name='product' placeholder='Enter product name' required='')
-    label(for='rating') Rating:
-    select#rating(name='rating' required='')
-      option(value='5') 5 - Excellent
-      option(value='4') 4 - Good
-      option(value='3') 3 - Average
-      option(value='2') 2 - Poor
-      option(value='1') 1 - Terrible
-    label(for='review') Review:
-    textarea#review(name='review' rows='4' placeholder='Write your review here...' required='')
-    button(type='submit') Submit Review
-// Display Reviews Section
-section.reviews
-  h2 Customer Reviews
-  // Sample Review 1
-  .review-item
-    h3 Leaf Curtain
-    p
-      strong Rating:
-      |  5/5
-    p
-      | Great product! Looks exactly like the photos, and the quality is fantastic. Would highly recommend!
-    p
-      strong - Reviewed by Jane Doe
-  // Sample Review 2
-  .review-item
-    h3 Women&apos;s Clothing
-    p
-      strong Rating:
-      |  4/5
-    p
-      | Good quality and fits well. Delivery was on time, but the packaging could be improved.
-    p
-      strong - Reviewed by John Smith
-  // More reviews as needed
-// Footer
-footer.footer
-  p &copy; 2024 Sample Store - All rights reserved
-  a(href='#') Help
-  a(href='#') Contact
-  a(href='#') Privacy
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Product Reviews
+    link(rel='stylesheet' href='/static/review.css')
+  body
+    // Navigation Bar
+    nav.navbar
+      .dropdown
+        button.dropbtn Categories
+        .dropdown-content
+          a(href='/mens_cloth') Men's Clothing
+          a(href='/women_cloth') Women's Clothing
+          a(href='#') Kids' Clothing
+          a(href='#') Footwear
+          a(href='#') Electronic Devices
+          a(href='#') Groceries
+          a(href='#') Home Decor
+          a(href='#') Kitchenware
+          a(href='#') Books
+      a(href='/') Home
+      a(href='/cart') Cart
+      a(href='/loginpage') Sign In
+
+    // Review Page Header
+    header.hero
+      h1 Product Reviews
+      p See what others are saying, or leave your own review
+
+    // Review Form Section
+    section.review-form
+      h2 Leave a Review
+      form#reviewForm(action='/submit-review' method='POST' onsubmit='return addReview(event)')
+        label(for='product') Product:
+        input#product(type='text' name='product' placeholder='Enter product name' required='')
+        label(for='rating') Rating:
+        select#rating(name='rating' required='')
+          option(value='5') 5 - Excellent
+          option(value='4') 4 - Good
+          option(value='3') 3 - Average
+          option(value='2') 2 - Poor
+          option(value='1') 1 - Terrible
+        label(for='review') Review:
+        textarea#review(name='review' rows='4' placeholder='Write your review here...' required='')
+        button(type='submit') Submit Review
+
+    // Display Reviews Section
+    section.reviews
+      h2 Customer Reviews
+      // Sample Review 1
+      .review-item
+        h3 Leaf Curtain
+        p
+          strong Rating:
+          | 5/5
+        p Great product! Looks exactly like the photos, and the quality is fantastic. Would highly recommend!
+        p
+          strong - Reviewed by Jane Doe
+        button.delete-review(type='button' onclick='deleteReview(event)') Delete Review
+      // More reviews as needed
+
+    // Footer
+    footer.footer
+      p &copy; 2024 Sample Store - All rights reserved
+      a(href='#') Help
+      a(href='#') Contact
+      a(href='#') Privacy
+
+    // JavaScript
+    script.
+      function addReview(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get form values
+        const product = document.getElementById('product').value;
+        const rating = document.getElementById('rating').value;
+        const reviewText = document.getElementById('review').value;
+
+        // Create new review item
+        const reviewItem = document.createElement('div');
+        reviewItem.classList.add('review-item');
+        reviewItem.innerHTML = `
+          <h3>${product}</h3>
+          <p><strong>Rating:</strong> ${rating}/5</p>
+          <p>${reviewText}</p>
+          <button class="delete-review" type="button" onclick="deleteReview(event)">Delete Review</button>
+        `;
+
+        // Append review item to reviews section
+        document.querySelector('.reviews').appendChild(reviewItem);
+
+        // Clear form fields
+        document.getElementById('product').value = '';
+        document.getElementById('rating').value = '5';
+        document.getElementById('review').value = '';
+      }
+
+      function deleteReview(event) {
+        const reviewItem = event.target.closest('.review-item');
+        if (reviewItem) {
+          reviewItem.remove();
+        }
+      }

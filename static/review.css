@@ -202,3 +202,19 @@ body {
 .footer a:hover {
     color: white;
 }
+
+.delete-review {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-review:hover {
+    background-color: #c9302c;
+}
