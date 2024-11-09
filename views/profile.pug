@@ -5,14 +5,33 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Profile
     link(rel="stylesheet" href="/static/profile_style.css")
-
   body
-    .container
+    .navbar
+      a(href='/') Home
+      a(href='/logout') Logout
+
+    .profile-container
       h1 Profile Page
       p Welcome, #{email}!
-      
+
       .profile-picture
         img(src="/static/placeholder.png" alt="Profile Picture")
 
-      p Here is your profile information.
-      a(href="/logout") Logout
+      .profile-info
+        h2 Profile Information
+        p
+          strong Email:
+          | #{email}
+        p
+          strong Phone:
+          | (123) 456-7890
+        p
+          strong Location:
+          | City, Country
+        p
+          strong Member Since:
+          | January 2023
+
+      .profile-actions
+        a(href='/edit-profile' class='btn edit-btn') Edit Profile
+        a(href='/logout' class='btn logout-btn') Logout
