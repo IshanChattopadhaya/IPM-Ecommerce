@@ -1,0 +1,64 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Men&apos;s Clothing
+  link(rel='stylesheet' href='/static/mens_styles.css')
+// Navigation Bar (reused from index.html)
+nav.navbar
+  a(href='/') Home
+  a(href='/cart') Cart
+  a(href='/loginpage') Sign In
+// Search Bar
+.search-bar
+  input(type='text' placeholder='Search for products')
+  button Search
+// Promotional Banners
+section.promo-banners
+  .banner
+    h2 Huge Sale! 30-50% off | Tshirt, Hoodies, Caps
+    p Get top deals on shirts, tank-tops, and jeans
+  .banner
+    h2 Up to 40% off | Leather Jackets, Trendy Kits
+    p Get the best offers on Belts, Shoes and more
+// Men's Clothing Items Section
+section.popular-deals
+  h2 Featured Men&apos;s Clothing
+  .deal-item-mens
+    img(src='/static/Mens_wear_pics/mens_tshirt1.jpg' alt='T-shirt')
+    h3 Stylish T-shirt
+    p
+      strong 40% off
+      |  - &#x20B9;499.00
+  .deal-item-mens
+    img(src='/static/Mens_wear_pics/mens_jeans1.jpg' alt='Jeans' style='width: 200px; height: 200px;')
+    h3 Black Classic Jeans
+    p
+      strong 34% off
+      |  - &#x20B9;899.00
+  // Add more men's clothing items as needed
+  h2  
+  .deal-item-mens
+    img(src='/static/Mens_wear_pics/mens_hoodie1.jpg.png' alt='Jeans' style='width: 200px; height: 200px;')
+    h3 2-In-1 Hoody
+    p
+      strong 27% off
+      |  - &#x20B9;850.00
+  .deal-item-mens
+    img(src='/static/Mens_wear_pics/mens_shoes1.jpg' alt='Jeans' style='width: 200px; height: 200px;')
+    h3 Leather Army Shoes
+    p
+      strong 30% off
+      |  - &#x20B9;860.00
+// Hero Section for Men's Clothing
+header.hero
+  h1 Men&apos;s Clothing Collection
+  p Explore the latest trends in men&apos;s fashion
+  a(href='/mens_all')
+    button Shop Men&apos;s Clothing
+// Footer (reused from index.html)
+footer.footer
+  p &copy; 2024 Sample Store - All rights reserved
+  a(href='#') Help
+  a(href='#') Contact
+  a(href='#') Privacy

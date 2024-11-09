@@ -120,6 +120,27 @@ app.get('/user',(req,res)=>{
   res.status(200).render('user.pug',params);
 });
 
+app.get('/cart',(req,res)=>{
+  const params = {};
+  res.status(200).render('cart.pug',params);
+});
+
+app.get('/mens_all',(req,res)=>{
+  const params = {};
+  res.status(200).render('mens_all.pug',params);
+});
+
+app.get('/mens_cloth',(req,res)=>{
+  const params = {};
+  res.status(200).render('mens_cloth.pug',params);
+});
+
+app.get('/women_cloth',(req,res)=>{
+  const params = {};
+  res.status(200).render('women_cloth.pug',params);
+});
+
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

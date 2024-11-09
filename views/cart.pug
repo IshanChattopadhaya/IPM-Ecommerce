@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Your Cart
+    link(rel="stylesheet" href="/static/cart_style.css")
+
+  body
+    // Navbar
+    nav.navbar
+      .dropdown
+        button.dropbtn Categories
+        .dropdown-content
+          a(href="/mens_all") Men's Clothing
+          a(href="/women_cloth") Women's Clothing
+          a(href="#") Kids' Clothing
+          a(href="#") Footwear
+          a(href="#") Electronic Devices
+          a(href="#") Groceries
+          a(href="#") Home Decor
+          a(href="#") Kitchenware
+          a(href="#") Books
+      a(href="/") Home
+      a(href="/cart") Cart
+      a(href="/loginpage") Sign In
+
+    .cart-container
+      h2 Your Cart
+      #cart-items.items-container
+        // Example cart item structure
+        .cart-item
+          img.cart-item-image(src="path_to_image" alt="Item Title")
+          .cart-item-details
+            h2 Item Title
+            p Item Description
+            p.price Price: ₹Item Price
+            button.delete-button(data-index="0") Delete
+          // Repeat for other items
+
+      .cart-total
+        h3 Total Price: 
+          span#total-price ₹0.00
+      button#checkout.checkout-button Checkout
+
+    // Footer
+    footer.footer
+      p © 2024 Sample Store - All rights reserved
+      a(href="#") Help
+      a(href="#") Contact
+      a(href="#") Privacy
+
+    script(src="/static/cart.js")
