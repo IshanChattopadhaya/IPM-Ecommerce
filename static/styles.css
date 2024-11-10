@@ -200,8 +200,8 @@ body {
 
 /* Hero Section */
 .hero {
-    background-color: #e6d5c3; /* Warm light beige */
-    color: #5c4a3d;
+    background-color: #a5a58d; /* Warm light beige */
+    color: white;
     text-align: center;
     padding: 50px 20px;
 }
@@ -228,7 +228,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    background-color: #e6d5c3;
+    background-color: #f9f5f1;
     gap: 20px;
 }
 

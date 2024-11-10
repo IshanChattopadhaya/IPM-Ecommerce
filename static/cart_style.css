@@ -7,13 +7,13 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Dark mode background */
-    color: #a5a58d; /* Light text for readability */
+    background-color: #f9f5f1;  /* Light warm beige background */
+    color: #5c4a3d; /* Warm brown text for readability */
 }
 
 /* Navbar and Footer */
 .navbar {
-    background-color: #2b2b2b; /* Darker navbar */
+    background-color: #e6d5c3;  /* Light warm accent */
     color: white;
     padding: 10px;
     display: flex;
@@ -22,14 +22,14 @@ body {
 }
 
 .navbar a {
-    color: #a5a58d;
+    color: #5c4a3d;
     text-decoration: none;
     padding: 10px;
     transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .navbar a:hover {
-    color: #cb997e; /* Accent color for hover */
+    color: #cb997e;  /* Accent color for hover */
     transform: scale(1.1);
 }
 
@@ -40,8 +40,8 @@ body {
 }
 
 .dropbtn {
-    background-color: #2b2b2b;
-    color: #a5a58d;
+    background-color: #e6d5c3;  /* Light warm accent */
+    color: #5c4a3d;
     padding: 10px;
     font-size: 16px;
     border: none;
@@ -52,7 +52,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333333; /* Dark background for dropdown */
+    background-color: #f0e4d2;  /* Soft cream */
     min-width: 200px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -60,7 +60,7 @@ body {
 }
 
 .dropdown-content a {
-    color: #a5a58d;
+    color: #5c4a3d;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -69,7 +69,7 @@ body {
 }
 
 .dropdown-content a:hover {
-    background-color: #444444; /* Slightly lighter for hover */
+    background-color: #e6cbb8;  /* Light tan */
 }
 
 .dropdown:hover .dropdown-content {
@@ -77,14 +77,14 @@ body {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #37475a;
+    background-color: #e6d5c3;  /* Light warm accent */
     transform: scale(1.05);
 }
 
 /* Container for Cart Items */
 .cart-container {
     padding: 20px;
-    background-color: #1e1e1e; /* Darker container background */
+    background-color: #f4efe9;  /* Light warm accent */
 }
 
 .items-container {
@@ -98,10 +98,10 @@ body {
     display: flex;
     width: 80%;
     max-width: 800px;
-    background-color: #333333; /* Dark background for cart item */
+    background-color: #a5a58d;  /* Darker background for cart item */
     margin: 20px 0;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     transition: transform 0.2s ease;
 }
@@ -124,13 +124,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: white;
 }
 
 /* Checkout Button Styling */
 .checkout-button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #cb997e; /* Green button */
+    background-color: #cb997e; /* Accent color for button */
     color: white;
     border: none;
     border-radius: 4px;
@@ -139,7 +140,7 @@ body {
 }
 
 .checkout-button:hover {
-    background-color: #388e3c; /* Darker green for hover */
+    background-color: #218838; /* Darker green for hover */
     transform: scale(1.05);
 }
 
@@ -149,11 +150,12 @@ body {
     padding: 10px;
     font-size: 1em;
     color: white;
-    background-color: #cb997e; /* Red color for delete button */
+    background-color: #cb997e; /* Soft tan color for delete button */
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .delete-button:hover {
@@ -165,24 +167,24 @@ body {
 .cart-total {
     margin-top: 20px;
     font-size: 1.5em;
-    color: #a5a58d;
+    color: #5c4a3d; /* Warm brown text */
 }
 
 /* Footer */
 .footer {
-    background-color: #2b2b2b;
-    color: white;
+    background-color: #e6d5c3;  /* Light warm accent */
+    color: #5c4a3d;
     text-align: center;
     padding: 10px;
 }
 
 .footer a {
-    color: #b0bec5; /* Lighter gray for links */
+    color: #b08968; /* Soft tan for footer links */
     text-decoration: none;
     margin: 0 10px;
     transition: color 0.3s ease;
 }
 
 .footer a:hover {
-    color: #cb997e;
+    color: #cb997e; /* Accent color for hover */
 }
