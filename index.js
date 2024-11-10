@@ -12,7 +12,7 @@ const mongoose = require("mongoose");
 const UserModel = require('./userModel')
 
 mongoose
-    .connect("mongodb://localhost:27017/UserDeets")
+    .connect("mongodb+srv://IshanChatto:HiJs2cpQV54qnbTo@login.1mna1.mongodb.net/?retryWrites=true&w=majority&appName=Login")
     .then(() => {
         console.info("Connected to DB");
     })
