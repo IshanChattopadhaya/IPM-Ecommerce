@@ -1,4 +1,4 @@
-/* Common styles */
+/* Reset and Global Styling */
 * {
     margin: 0;
     padding: 0;
@@ -7,70 +7,69 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark mode background */
+    color: #a5a58d; /* Light text for readability */
 }
 
 /* Navbar and Footer */
 .navbar {
-    background-color: #232f3e;
+    background-color: #2b2b2b; /* Darker navbar */
     color: white;
     padding: 10px;
     display: flex;
     justify-content: space-around;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-}
-/* Dropdown menu for Categories */
-.navbar {
-    background-color: #232f3e;
-    color: white;
-    padding: 10px;
-    display: flex;
     align-items: center;
 }
 
 .navbar a {
-    color: white;
+    color: #a5a58d;
     text-decoration: none;
     padding: 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
+.navbar a:hover {
+    color: #cb997e; /* Accent color for hover */
+    transform: scale(1.1);
+}
+
+/* Dropdown Menu for Categories */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
 .dropbtn {
-    background-color: #232f3e;
-    color: white;
+    background-color: #2b2b2b;
+    color: #a5a58d;
     padding: 10px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: #333333; /* Dark background for dropdown */
     min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    border-radius: 4px;
 }
 
 .dropdown-content a {
-    color: #232f3e;
+    color: #a5a58d;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     font-size: 14px;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #444444; /* Slightly lighter for hover */
 }
 
 .dropdown:hover .dropdown-content {
@@ -79,12 +78,13 @@ body {
 
 .dropdown:hover .dropbtn {
     background-color: #37475a;
+    transform: scale(1.05);
 }
 
-/* Container for cart items */
+/* Container for Cart Items */
 .cart-container {
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: #1e1e1e; /* Darker container background */
 }
 
 .items-container {
@@ -93,19 +93,24 @@ body {
     align-items: center;
 }
 
-/* Style for each cart item */
+/* Style for Each Cart Item */
 .cart-item {
     display: flex;
     width: 80%;
     max-width: 800px;
-    background-color: #fff;
+    background-color: #333333; /* Dark background for cart item */
     margin: 20px 0;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+    transition: transform 0.2s ease;
 }
 
-/* Image styling */
+.cart-item:hover {
+    transform: scale(1.03);
+}
+
+/* Image Styling */
 .cart-item-image {
     width: 150px;
     height: 150px;
@@ -114,59 +119,70 @@ body {
     margin-right: 20px;
 }
 
-/* Item details */
+/* Item Details */
 .cart-item-details {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* Checkout button styling */
+/* Checkout Button Styling */
 .checkout-button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #28a745; /* Green color for button */
+    background-color: #cb997e; /* Green button */
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Delete button styling */
+.checkout-button:hover {
+    background-color: #388e3c; /* Darker green for hover */
+    transform: scale(1.05);
+}
+
+/* Delete Button Styling */
 .delete-button {
     margin-top: 10px;
     padding: 10px;
-    font-size: 1.0em;
+    font-size: 1em;
     color: white;
-    background-color: #dc3545; /* Red color for delete button */
+    background-color: #cb997e; /* Red color for delete button */
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.delete-button:hover {
+    background-color: #c62828; /* Darker red for hover */
+    transform: scale(1.05);
+}
 
-/* Total price styling */
+/* Total Price Styling */
 .cart-total {
     margin-top: 20px;
     font-size: 1.5em;
-    color: #333;
+    color: #a5a58d;
 }
 
+/* Footer */
 .footer {
-    background-color: #232f3e;
+    background-color: #2b2b2b;
     color: white;
     text-align: center;
     padding: 10px;
-    position:static;
 }
 
 .footer a {
-    color: #ddd;
+    color: #b0bec5; /* Lighter gray for links */
     text-decoration: none;
     margin: 0 10px;
-    
+    transition: color 0.3s ease;
 }
 
 .footer a:hover {
-    color: #fff;
+    color: #cb997e;
 }

@@ -7,32 +7,21 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #f9f5f1;  /* Light warm beige background */
+    color: #5c4a3d;  /* Warm brown text color */
 }
-/* Navbar and Footer */
+
+/* Navbar */
 .navbar {
-    background-color: #232f3e;
-    color: white;
+    background-color: #e6d5c3; /* Light warm accent */
+    color: #5c4a3d;
     padding: 10px;
     display: flex;
     justify-content: space-around;
 }
 
 .navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-}
-/* Dropdown menu for Categories */
-.navbar {
-    background-color: #232f3e;
-    color: white;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.navbar a {
-    color: white;
+    color: #5c4a3d;
     text-decoration: none;
     padding: 10px;
 }
@@ -43,8 +32,8 @@ body {
 }
 
 .dropbtn {
-    background-color: #232f3e;
-    color: white;
+    background-color: #e6d5c3;  /* Light warm accent */
+    color: #5c4a3d;
     padding: 10px;
     font-size: 16px;
     border: none;
@@ -54,14 +43,14 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: #f0e4d2;  /* Soft cream */
     min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
-    color: #232f3e;
+    color: #5c4a3d; /* Warm text color */
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -69,7 +58,7 @@ body {
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #e6cbb8; /* Light tan */
 }
 
 .dropdown:hover .dropdown-content {
@@ -77,48 +66,51 @@ body {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #37475a;
+    background-color: #e6d5c3; /* Light warm accent */
 }
 
+/* Heading styles */
 .mens-heading {
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    background-color: #fffae6;
+    background-color: #f4efe9;  /* Darker background */
 }
 
 .heading {
     width: 45%;
     text-align: center;
     padding: 20px;
-    background-color: #ffdd99;
+    background-color: #a5a58d;  /* Darker card background */
     border-radius: 8px;
 }
 
 .mens-heading h2 {
-    color: #333;
+    color: white;  /* Accent color */
 }
 
-
+/* Search bar */
 .search-bar {
     display: flex;
     justify-content: center;
     padding: 10px;
-    background-color: #f3f3f3;
+    background-color: #e6d5c3; /* Light warm accent */
 }
 
 .search-bar input {
     width: 60%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #cbb79e;  /* Light warm border color */
     border-radius: 4px 0 0 4px;
     outline: none;
+    background-color: #f4efe9;  /* Light cream input field */
+    color: #5c4a3d;  /* Warm text color */
 }
 
 .search-bar button {
     padding: 10px 20px;
-    background-color: #ff9900;
-    color: white;
+    background-color: #b08968;  /* Soft tan */
+    color: #f9f5f1;
     border: none;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
@@ -129,7 +121,7 @@ body {
     text-align: center;
     font-size: 2em;
     margin-top: 20px;
-    color: #333;
+    color: #cb997e;  /* Accent color */
 }
 
 /* Container for items */
@@ -138,7 +130,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: #e6d5c3;  /* Dark background */
 }
 
 /* Style each item in a row with image on the left, details on the right */
@@ -146,7 +138,7 @@ body {
     display: flex;
     width: 80%;
     max-width: 800px;
-    background-color: #fff;
+    background-color: #f4efe9;  /* Dark card background */
     margin: 20px 0;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -173,19 +165,19 @@ body {
 .item-details h2 {
     margin: 0;
     font-size: 1.5em;
-    color: #333;
+    color: #cb997e;  /* Accent color */
 }
 
 /* Item description */
 .item-details p {
     margin: 5px 0;
-    color: #666;
+    color: #5c4a3d;  /* Text color */
 }
 
 /* Price styling */
 .price {
     font-weight: bold;
-    color: #333;
+    color: #5c4a3d;  /* Text color */
 }
 
 /* Add-to-cart button styling */
@@ -194,7 +186,7 @@ body {
     padding: 10px;
     font-size: 1.0em;
     color: #fff;
-    background-color: #28a745; /* Green color for button */
+    background-color: #a5a58d;  /* Green color for button */
     border: none;
     border-radius: 40%;
     cursor: pointer;
@@ -207,25 +199,19 @@ body {
     background-color: #218838;
 }
 
+/* Footer */
 .footer {
-    background-color: #232f3e;
-    color: white;
+    background-color: #e6d5c3;  /* Light warm accent */
+    color: #5c4a3d;
     text-align: center;
     padding: 10px;
 }
 
 .footer a {
-    color: #ddd;
+    color: #b08968;  /* Soft tan */
     text-decoration: none;
     margin: 0 10px;
 }
-
-.footer a:hover {
-    color: #fff;
-}
-
-/* Container for consistent background and padding 
-
 
 /* Cart count badge */
 #cart-count {
@@ -237,15 +223,15 @@ body {
     margin-left: 5px;
 }
 
-
+/* Review section button */
 .review-section {
     display: flex;
     justify-content: center;
     margin: 2em 0; /* Adds spacing above and below the button */
-  }
-  
-  .review-button {
-    background-color: #218838;
+}
+
+.review-button {
+    background-color: #a5a58d;  /* Green color for button */
     color: white;
     padding: 0.6em 1.2em;
     font-size: 1em;
@@ -254,8 +240,8 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-decoration: none; /* Ensures no underline */
-  }
-  
-  .review-button:hover {
-    background-color: #0056b3;
-  }
+}
+
+.review-button:hover {
+    background-color: #218838;  /* Blue color on hover */
+}

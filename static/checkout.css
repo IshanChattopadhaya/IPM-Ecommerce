@@ -1,3 +1,4 @@
+/* Reset and Global Styling */
 * {
   margin: 0;
   padding: 0;
@@ -6,69 +7,69 @@
 
 body {
   font-family: Arial, sans-serif;
+  background-color: #121212; /* Dark mode background */
+  color: #a5a58d; /* Light text for readability */
 }
 
+/* Navbar and Footer */
 .navbar {
-  background-color: #232f3e;
+  background-color: #2b2b2b; /* Darker navbar */
   color: white;
   padding: 10px;
   display: flex;
   justify-content: space-around;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-}
-/* Dropdown menu for Categories */
-.navbar {
-  background-color: #232f3e;
-  color: white;
-  padding: 10px;
-  display: flex;
   align-items: center;
 }
 
 .navbar a {
-  color: white;
+  color: #a5a58d;
   text-decoration: none;
   padding: 10px;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
+.navbar a:hover {
+  color: #cb997e; /* Accent color for hover */
+  transform: scale(1.1);
+}
+
+/* Dropdown Menu for Categories */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
 .dropbtn {
-  background-color: #232f3e;
-  color: white;
+  background-color: #2b2b2b;
+  color: #a5a58d;
   padding: 10px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: #333333; /* Dark background for dropdown */
   min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-radius: 4px;
 }
 
 .dropdown-content a {
-  color: #232f3e;
+  color: #a5a58d;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #444444; /* Slightly lighter for hover */
 }
 
 .dropdown:hover .dropdown-content {
@@ -77,34 +78,39 @@ body {
 
 .dropdown:hover .dropbtn {
   background-color: #37475a;
+  transform: scale(1.05);
 }
 
-
-
-
+/* Checkout Container */
 .checkout-container {
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #1c1c1c; /* Dark background for container */
   border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Items Container */
 .items-container {
   margin-bottom: 25px;
   padding: 15px;
   border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  background-color: #222222; /* Dark background for items */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Full width within container */
 }
 
+/* Each Checkout Item */
 .checkout-item {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
   padding: 10px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #333333; /* Darker divider */
 }
 
 .checkout-item:last-child {
@@ -116,44 +122,49 @@ body {
   height: 80px;
   border-radius: 4px;
   margin-right: 15px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .checkout-item-details {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  flex: 1; /* Take up remaining space */
 }
 
+/* Checkout Summary */
 .checkout-summary {
   font-size: 1.6em;
   font-weight: bold;
   margin-top: 25px;
   margin-bottom: 30px;
-  color: #333;
+  color: #cb997e; /* Accent color for totals */
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  background-color: #fff;
+  background-color: #222222; /* Dark background */
   border-radius: 8px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Full width within container */
 }
 
 .checkout-summary span#final-total {
-  color: #ff9900;
+  color: #cb997e;
 }
 
+/* Address Section */
 .address-section {
   margin-top: 35px;
   padding: 15px;
-  background-color: #fff;
+  background-color: #222222; /* Dark background */
   border-radius: 8px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Full width within container */
 }
 
 .address-section h3 {
   font-size: 1.4em;
-  color: #333;
+  color: #cb997e; /* Accent color for section titles */
   margin-bottom: 15px;
 }
 
@@ -165,25 +176,28 @@ body {
 
 .address-section label {
   font-weight: bold;
-  color: #555;
+  color: #cccccc; /* Light gray for labels */
 }
 
 .address-section input {
   padding: 10px;
-  border: 1px solid #ddd;
+  background-color: #333333; /* Darker input background */
+  color: #e0e0e0;
+  border: 1px solid #444444;
   border-radius: 4px;
   outline: none;
   transition: border-color 0.3s ease;
 }
 
 .address-section input:focus {
-  border-color: #ff9900;
+  border-color: #cb997e; /* Accent color on focus */
 }
 
+/* Confirm Order Button */
 #confirm-order {
   grid-column: span 2;
   padding: 12px;
-  background-color: #ff9900;
+  background-color: #cb997e;
   color: white;
   border: none;
   border-radius: 4px;
@@ -191,26 +205,51 @@ body {
   font-size: 1.1em;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 #confirm-order:hover {
-  background-color: #ff9900;
+  background-color: #cb997e; /* Slightly darker for hover */
   transform: translateY(-2px);
 }
 
-
-
-  .footer {
-    background-color: #232f3e;
-    color: white;
-    text-align: center;
-    padding: 10px;
+/* Footer */
+.footer {
+  background-color: #2b2b2b; /* Keep footer darker */
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
 .footer a {
-    color: #ddd;
-    text-decoration: none;
-    margin: 0 10px;
+  color: #b0bec5; /* Lighter gray for links */
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
 }
 
+.footer a:hover {
+  color: #cb997e; /* Accent color for hover */
+}
+
+/* Minor tweaks */
+input[type="text"], input[type="email"], input[type="number"] {
+  font-size: 1em;
+  padding: 10px;
+  background-color: #333333; /* Same as input background */
+  color: #e0e0e0;
+  border: 1px solid #444444;
+  border-radius: 4px;
+  width: 100%; /* Full-width input */
+}
+
+textarea {
+  font-size: 1em;
+  padding: 10px;
+  background-color: #333333; /* Same as input background */
+  color: #e0e0e0;
+  border: 1px solid #444444;
+  border-radius: 4px;
+  width: 100%;
+  resize: vertical;
+}
