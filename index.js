@@ -125,9 +125,8 @@ app.get('/cart',(req,res)=>{
   res.status(200).render('cart.pug',params);
 });
 
-app.get('/mens_all',(req,res)=>{
-  const params = {};
-  res.status(200).render('mens_all.pug',params);
+app.get('/mens_all', (req, res) => {
+  res.render('mens_all', { items: mensItems });
 });
 
 app.get('/mens_cloth',(req,res)=>{
@@ -148,6 +147,26 @@ app.get('/reviews',(req,res)=>{
 app.get('/checkout',(req,res)=>{
   const params = {};
   res.status(200).render('checkout.pug',params);
+});
+
+const mensItems = [
+  { name: 'Stylish T-Shirt', description: 'High-quality cotton t-shirt', price: 499, image: '/static/Mens_wear_pics/mens_tshirt1.jpg' },
+  { name: 'Stylish Shoes', description: 'Comfortable and modern shoes', price: 3999, image: '/static/Mens_wear_pics/mens_shoes1.jpg' },
+  { name: 'Stylish Jeans', description: 'High-quality denim jeans', price: 899, image: '/static/Mens_wear_pics/mens_jeans1.jpg' },
+  // Add more items as needed
+];
+
+app.get('/search', (req, res) => {
+  const query = req.query.query ? req.query.query.toLowerCase() : '';
+  const filteredItems = mensItems.filter(item =>
+    item.name.toLowerCase().includes(query) || item.description.toLowerCase().includes(query)
+  );
+  res.render('mens_all', { items: filteredItems, query });
+});
+
+// Route to display all men's items without filtering
+app.get('/mens_all', (req, res) => {
+  res.render('mens_all', { items: mensItems });
 });
 
 app.listen(PORT, () => {

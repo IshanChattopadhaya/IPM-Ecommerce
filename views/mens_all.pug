@@ -3,7 +3,7 @@ html
   head
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title Men&apos;s All Items
+    title Men's All Items
     link(rel='stylesheet' href='/static/mens_all.css')
 
   body
@@ -12,9 +12,9 @@ html
       .dropdown
         button.dropbtn Categories
         .dropdown-content
-          a(href='/mens_all') Men&apos;s Clothing
-          a(href='/women_cloth') Women&apos;s Clothing
-          a(href='#') Kids&apos; Clothing
+          a(href='/mens_cloth') Men's Clothing
+          a(href='/women_cloth') Women's Clothing
+          a(href='#') Kids' Clothing
           a(href='#') Footwear
           a(href='#') Electronic Devices
           a(href='#') Groceries
@@ -27,42 +27,31 @@ html
 
     // Search Bar
     .search-bar
-      input(type='text' placeholder='Search for products')
-      button Search
+      form(action="/search" method="GET")
+        input(type="text" name="query" placeholder="Search for products")
+        button(type="submit") Search
 
-    // Promotional Banners
+    // Promotional Banners or Dynamic Heading
     section.mens-heading
       .heading
-        h2 Search all in Men&apos;s Fashionista 
+        if query
+          h2 Showing results for "#{query}" in Men’s Fashionista
+        else
+          h2 Search all in Men's Fashionista
 
     // Items Container
     .items-container
-      .item
-        img.item-image(src='/static/Mens_wear_pics/mens_tshirt1.jpg' alt='Stylish T-Shirt')
-        .item-details
-          h2 Stylish T-Shirt
-          p High-quality cotton t-shirt with a comfortable fit and modern design.
-          p.price Price: &#x20B9;499.00
-          button.add-to-cart +
-
-      .item
-        img.item-image(src='/static/Mens_wear_pics/mens_shoes1.jpg' alt='Stylish Shoes')
-        .item-details
-          h2 Stylish Shoes
-          p High-quality shoes with a comfortable fit and modern design.
-          p.price Price: &#x20B9;3999.00
-          button.add-to-cart +
-      
-      .item
-        img.item-image(src='/static/Mens_wear_pics/mens_jeans1.jpg' alt='Stylish Jeans')
-        .item-details
-          h2 Stylish Jeans
-          p High-quality denim with a comfortable fit and modern design.
-          p.price Price: &#x20B9;899.00
-          button.add-to-cart +
-
-      // Repeat similar structure for other items
-      // (Additional items here...)
+      if items.length
+        each item in items
+          .item
+            img.item-image(src=item.image alt=item.name)
+            .item-details
+              h2= item.name
+              p= item.description
+              p.price Price: ₹#{item.price}
+              button.add-to-cart +
+      else
+        p No items found matching "#{query}"
 
     // Review Button Section
     .review-section
