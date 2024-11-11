@@ -84,7 +84,6 @@ app.post('/login', async (req, res) => {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
 
-    // Save email to session on successful login
     req.session.email = email;
 
     // Redirect to profile page
@@ -162,11 +161,6 @@ app.get('/search', (req, res) => {
     item.name.toLowerCase().includes(query) || item.description.toLowerCase().includes(query)
   );
   res.render('mens_all', { items: filteredItems, query });
-});
-
-// Route to display all men's items without filtering
-app.get('/mens_all', (req, res) => {
-  res.render('mens_all', { items: mensItems });
 });
 
 app.listen(PORT, () => {
