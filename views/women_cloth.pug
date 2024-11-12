@@ -10,10 +10,10 @@ nav.navbar
   a(href='/') Home
   a(href='/cart') Cart
   a(href='/loginpage') Sign In
-// Search Bar
 .search-bar
-  input(type='text' placeholder='Search for products')
-  button Search
+      form(action="/search" method="GET")
+        input(type="text" name="query" placeholder="Search for products")
+        button(type="submit") Search    
 // Promotional Banners
 section.promo-banners
   .banner
@@ -24,7 +24,7 @@ section.promo-banners
     p Get the best offers on Belts, Shoes and more
 // Women's Clothing Items Section
 section.popular-deals
-  h2 Featured Men&apos;s Clothing
+  h2 Featured Women&apos;s Clothing
   .deal-item-mens
     img(src='/static/Women_wear_pics/womens_ethnic1.jpg' alt='Ethnic' style='width: 200px; height: 200px;')
     h3 Ethnic Wear
@@ -33,7 +33,7 @@ section.popular-deals
       |  - &#x20B9;799.00
   .deal-item-mens
     img(src='/static/Women_wear_pics/womens_tshirt1.jpg' alt='Tshirt' style='width: 200px; height: 200px;')
-    h3 Pink Tshirt
+    h3 Red T-Shirt
     p
       strong 34% off
       |  - &#x20B9;399.00
@@ -47,7 +47,7 @@ section.popular-deals
       |  - &#x20B9;550.00
   .deal-item-mens
     img(src='/static/Women_wear_pics/womens_jeans1.jpg' alt='Jeans' style='width: 200px; height: 200px;')
-    h3 White heels
+    h3 Designer Jeans
     p
       strong 30% off
       |  - &#x20B9;770.00
@@ -55,7 +55,8 @@ section.popular-deals
 header.hero
   h1 Women&apos;s Clothing Collection
   p Explore the latest trends in women&apos;s fashion
-  button Shop Women&apos;s Clothing
+  a(href='/mens_all')
+    button Shop Women&apos;s Clothing
 // Footer (reused from index.html)
 footer.footer
   p &copy; 2024 Sample Store - All rights reserved

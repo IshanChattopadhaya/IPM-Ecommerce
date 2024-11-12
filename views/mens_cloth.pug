@@ -9,10 +9,11 @@ nav.navbar
   a(href='/') Home
   a(href='/cart') Cart
   a(href='/loginpage') Sign In
-// Search Bar
+
 .search-bar
-  input(type='text' placeholder='Search for products')
-  button Search
+      form(action="/search" method="GET")
+        input(type="text" name="query" placeholder="Search for products")
+        button(type="submit") Search
 // Promotional Banners
 section.promo-banners
   .banner
@@ -40,7 +41,7 @@ section.popular-deals
   h2  
   .deal-item-mens
     img(src='/static/Mens_wear_pics/mens_hoodie1.jpg.png' alt='Jeans' style='width: 200px; height: 200px;')
-    h3 2-In-1 Hoody
+    h3 2-In-1 Hoodie
     p
       strong 27% off
       |  - &#x20B9;850.00

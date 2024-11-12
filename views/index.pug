@@ -27,8 +27,9 @@ html(lang="en")
 
     // Search Bar
     .search-bar
-      input(type='text' placeholder='Search for products')
-      button Search
+      form(action="/search" method="GET")
+        input(type="text" name="query" placeholder="Search for products")
+        button(type="submit") Search
 
       
     section.promo-banners

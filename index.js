@@ -150,8 +150,14 @@ app.get('/checkout',(req,res)=>{
 
 const mensItems = [
   { name: 'Stylish T-Shirt', description: 'High-quality cotton t-shirt', price: 499, image: '/static/Mens_wear_pics/mens_tshirt1.jpg' },
-  { name: 'Stylish Shoes', description: 'Comfortable and modern shoes', price: 3999, image: '/static/Mens_wear_pics/mens_shoes1.jpg' },
-  { name: 'Stylish Jeans', description: 'High-quality denim jeans', price: 899, image: '/static/Mens_wear_pics/mens_jeans1.jpg' },
+  { name: 'Leather Army Shoes', description: 'Comfortable and modern shoes', price: 860, image: '/static/Mens_wear_pics/mens_shoes1.jpg' },
+  { name: 'Black Classic Jeans', description: 'High-quality denim jeans', price: 899, image: '/static/Mens_wear_pics/mens_jeans1.jpg' },
+  { name: '2-In-1 Hoodie', description: 'High-quality hoodie', price: 850, image: '/static/Mens_wear_pics/mens_hoodie1.jpg.png' },
+
+  { name: 'Ethnic Wear', description: 'Women Ethnic Wear', price: 799, image: '/static/Women_wear_pics/womens_ethnic1.jpg' },
+  { name: 'Red T-Shirt', description: 'High-quality cotton t-shirt', price: 399, image: '/static/Women_wear_pics/womens_tshirt1.jpg' },
+  { name: '2-In-1 formal wear', description: 'High-quality formal wear', price: 559, image: '/static/Women_wear_pics/womens_dress1.jpg' },
+  { name: 'Designer Jeans', description: 'High-quality denim jeans', price: 770, image: '/static/Women_wear_pics/womens_jeans1.jpg' },
   // Add more items as needed
 ];
 
